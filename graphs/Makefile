@@ -1,7 +1,7 @@
 CC      = gcc
 CFLAGS  = -Wall -ansi
 SOURCES = $(wildcard *.c)
-OBJS    = $(patsubst %.c, %.o, $(SOURCES))
+OBJS    = $(SOURCES:.c,.o)
 BINS    = graph_test
 
 all: $(BINS)
